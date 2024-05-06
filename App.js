@@ -6,6 +6,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { HomeScreen } from "./src/screens/HomeScreen";
 import { CounterScreen } from "./src/screens/CounterScreen";
 import { LoginScreen } from "./src/screens/LoginScreen";
+import { ListPokeScreen } from "./src/screens/ListPokeScreen";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
@@ -45,6 +46,19 @@ export default function App() {
                 tabBarIcon: ({ color }) => (
                   <MaterialCommunityIcons
                     name="login"
+                    color={color}
+                    size={26}
+                  />
+                ),
+              }}
+            />
+            <Drawer.Screen
+              name="Lista de Pokemones"
+              component={ListPokeScreen}
+              options={{
+                tabBarIcon: ({ color }) => (
+                  <MaterialCommunityIcons
+                    name="book"
                     color={color}
                     size={26}
                   />
